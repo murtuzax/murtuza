@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color:#050505;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 60px;
+}
+
+.logo {
+    font-size: 18px;
+    color: #bbb;
+    letter-spacing: 2px;
+    transition: color 0.2s ease;
+}
+
+.logo:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: color 0.2s ease;
+}
+
+.links a:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.links a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #bbb;
+}
+
+.github-icon {
+    width: 16px;
+    height: 16px;
+
+}
+
+#hero {
+    padding: 60px 20px;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.name {
+    margin-bottom: 20px;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.information p {
+    color: #bbb;
+    line-height: 2;
+}
+
+#projects {
+    padding: 60px 20px;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+#projects h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.project {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 15px 10px;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.project-description {
+    color: #bbb;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.project-title {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.project-link {
+    color: white;
+    padding: 2px 20px;
+    font-size: 13px;
+    border:1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    text-decoration: none;
+}
