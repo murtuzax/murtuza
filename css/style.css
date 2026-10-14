@@ -120,3 +120,61 @@ body {
     border-radius: 8px;
     text-decoration: none;
 }
+
+#about {
+    padding: 60px 20px;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-information div {
+    display: flex;
+    gap: 5px;
+    color: #bbb;
+    align-items: center;
+}
+
+.about-info-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.about-info-card svg {
+    height: 16px;
+    width: 16px;
+}
+
+#contact {
+    padding: 60px 20px;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+#contact p {
+    color: #bbb;
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.contacts {
+    margin-bottom: 48px;
+}
+
+.contacts a {
+    color: white;
+    font-size: 16px;
+}
+
+.contacts a svg {
+    height: 16px;
+    width: 16px;
+}
