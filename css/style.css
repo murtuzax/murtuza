@@ -1,5 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
+:root {
+    --text-heading: #000;
+    --text-muted: #555;
+    --bg-color:#fff;
+    --border-color:rgba(0, 0, 0, 0.2);
+    --bg-card:rgba(0, 0, 0, 0.1);
+    --logo-hover-color:rgba(0, 0, 0, 0.9);
+    --atom-opacity:0.2;
+    --star-shadow:0 0 0 1px rgba(0, 0, 0, 0.1),
+        0 0 0 8px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(0, 0, 0, 1);
+    --star-tail-color:rgba(0, 0, 0, 0.5);
+    --bg-music-player-popup: rgba(255, 255, 255, 0.4);
+}
+
+.dark {
+    --text-heading: white;
+    --text-muted: #bbb;
+    --bg-color:#050505;
+    --border-color:rgba(255, 255, 255, 0.2);
+    --bg-card:rgba(255, 255, 255, 0.1);
+    --logo-hover-color:rgba(255, 255, 255, 0.9);
+    --atom-opacity:0.1;
+    --star-shadow:0 0 0 1px rgba(255, 255, 255, 0.1),
+        0 0 0 8px rgba(255, 255, 255, 0.1),
+        0 0 20px rgba(255, 255, 255, 1);
+    --star-tail-color:rgba(255, 255, 255, 0.5);
+    --bg-music-player-popup: rgba(0, 0, 0, 0.4);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,7 +40,7 @@ html {
 }
 
 body {
-    background-color: #050505;
+    background-color: var(--bg-color);
     color: white;
     font-family: "Inter", sans-serif;
     overflow-x: clip;
@@ -20,18 +50,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 60px;
+    padding: 30px 60px;
 }
 
 .logo {
     font-size: 18px;
-    color: #bbb;
-    letter-spacing: 2px;
+    color: var(--text-muted);
     transition: color 0.2s ease;
+    font-style: italic;
 }
 
 .logo:hover {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--logo-hover-color);
 }
 
 .links {
@@ -42,13 +72,13 @@ body {
 }
 
 .link:hover {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--logo-hover-color);
 }
 
 .link {
     font-size: 16px;
     text-decoration: none;
-    color: #bbb;
+    color: var(--text-muted);
 }
 
 .github-icon {
@@ -59,7 +89,12 @@ body {
 
 .music-icon {
     width: 16px;
-    height: 16px;   
+    height: 16px;
+}
+
+.theme-switcher {
+    width: 16px;
+    height: 16px;
 }
 
 #hero {
@@ -69,6 +104,7 @@ body {
 }
 
 .name {
+    color: var(--text-heading);
     margin-bottom: 20px;
 }
 
@@ -79,7 +115,7 @@ body {
 }
 
 .information p {
-    color: #bbb;
+    color: var(--text-muted);
     line-height: 2;
 }
 
@@ -93,10 +129,11 @@ body {
 #projects h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    color:var(--text-heading);
 }
 
 .project {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 15px 10px;
     transition: scale 0.2s ease;
@@ -113,22 +150,22 @@ body {
 }
 
 .project-description {
-    color: #bbb;
+    color: var(--text-muted);
     font-size: 13px;
     margin-bottom: 12px;
 }
 
 .project-title {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-muted);
     font-size: 16px;
     margin-bottom: 4px;
 }
 
 .project-link {
-    color: white;
+    color: var(--text-heading);
     padding: 2px 20px;
     font-size: 13px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     text-decoration: none;
 }
@@ -142,28 +179,28 @@ body {
 #about h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    color:var(--text-heading);
 }
 
 .about-information div {
     display: flex;
     gap: 5px;
-    color: #bbb;
+    color: var(--text-muted);
     align-items: center;
 }
 
 .about-info-card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--bg-card);
     padding: 5px;
     border-radius: 8px;
     font-size: 13px;
     margin-bottom: 8px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: scale 0.2s ease;
 }
 
 .about-info-card:hover {
-    color: rgba(255, 255, 255, 0.9);
-    background-color: rgba(255, 255, 255, 0.2);
+    scale: 1.05;
 }
 
 .about-info-card svg {
@@ -178,7 +215,7 @@ body {
 }
 
 #contact p {
-    color: #bbb;
+    color: var(--text-muted);
     margin-bottom: 6px;
     font-size: 16px;
     line-height: 2;
@@ -196,7 +233,7 @@ body {
 }
 
 .contacts a {
-    color: white;
+    color: var(--text-heading);
     font-size: 16px;
     display: inline-flex;
     align-items: center;
@@ -214,11 +251,9 @@ body {
     right: 20%;
     height: 4px;
     width: 4px;
-    background-color: white;
+    background-color: var(--text-heading);
     border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
-        0 0 0 8px rgba(255, 255, 255, 0.1),
-        0 0 20px rgba(255, 255, 255, 1);
+    box-shadow: var(--star-shadow);
     animation: animate 3.2s linear infinite;
     opacity: 0;
 }
@@ -228,7 +263,7 @@ body {
     content: '';
     width: 250px;
     height: 1px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
+    background: linear-gradient(to right, var(--star-tail-color), transparent);
 }
 
 @keyframes animate {
@@ -274,7 +309,7 @@ span:nth-child(3) {
 .categories a {
     font-size: 24px;
     font-weight: bold;
-    color: #373737;
+    color: var(--text-muted);
     text-decoration: none;
 }
 
@@ -295,7 +330,7 @@ span:nth-child(3) {
     align-items: center;
     padding: 12px;
     gap: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
 }
 
@@ -305,7 +340,7 @@ span:nth-child(3) {
 }
 
 .blog-title {
-    color: #bbb;
+    color: var(--text-muted);
     font-size: 16px;
 }
 
@@ -318,6 +353,7 @@ span:nth-child(3) {
     height: 16px;
     width: 16px;
     display: none;
+    color: var(--text-heading);
 }
 
 .atom {
@@ -328,20 +364,20 @@ span:nth-child(3) {
     z-index: -10;
     right: -50%;
     bottom: -6%;
-    opacity: 0.1;
+    opacity: var(--atom-opacity);
 }
 
 .proton {
     height: 25px;
     width: 25px;
-    background-color: white;
+    background-color: var(--text-heading);
     border-radius: 50%;
 }
 
 .shell {
     height: var(--shell-size);
     width: var(--shell-size);
-    border: 1px solid white;
+    border: 1px solid var(--text-heading);
     border-radius: 50%;
 
     position: absolute;
@@ -355,7 +391,7 @@ span:nth-child(3) {
 .electron {
     height: 15px;
     width: 15px;
-    background-color: white;
+    background-color: var(--text-heading);
     border-radius: 50%;
 
     margin-top: -7.5px;
@@ -369,9 +405,10 @@ span:nth-child(3) {
 }
 
 @keyframes rotate {
-from {
+    from {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+
     to {
         transform: translate(-50%, -50%) rotate(360deg);
     }
@@ -383,20 +420,20 @@ from {
     display: none;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--bg-music-player-popup);
     backdrop-filter: blur(10px);
 }
 
-.music-heading {
+.music-player p {
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-heading);
 }
 
 .music-player {
     display: flex;
     flex-direction: column;
     width: 320px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--border-color);
     padding: 20px;
     border-radius: 8px;
     gap: 20px;
@@ -407,7 +444,7 @@ from {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
     padding: 10px;
 }
 
@@ -427,21 +464,16 @@ from {
     margin-left: 8px;
 }
 
-.music-title {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 2.5px;
-}
 
 .music-desc {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--text-muted);
 }
 
 .close-button {
     border: none;
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-muted);
     position: absolute;
     top: 20px;
     right: 20px;
@@ -449,12 +481,28 @@ from {
 }
 
 .close-button svg {
-        height: 18px;
+    height: 18px;
     width: 18px;
 }
 
 .open {
     display: flex;
+}
+
+.my-image-div {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.my-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
 }
 
 @media (max-width:768px) {
@@ -478,5 +526,13 @@ from {
 
     .atom {
         display: none;
+    }
+
+    .star {
+        display: none;
+    }
+
+    .navbar {
+        padding: 30px 20px;
     }
 }
