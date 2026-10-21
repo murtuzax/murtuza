@@ -41,11 +41,11 @@ body {
     transition: color 0.2s ease;
 }
 
-.links a:hover {
+.link:hover {
     color: rgba(255, 255, 255, 0.9);
 }
 
-.links a {
+.link {
     font-size: 16px;
     text-decoration: none;
     color: #bbb;
@@ -55,6 +55,11 @@ body {
     width: 16px;
     height: 16px;
 
+}
+
+.music-icon {
+    width: 16px;
+    height: 16px;   
 }
 
 #hero {
@@ -370,6 +375,86 @@ from {
     to {
         transform: translate(-50%, -50%) rotate(360deg);
     }
+}
+
+.music-player-popup {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.music-heading {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.music-player {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    gap: 20px;
+    position: relative;
+}
+
+.music-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+.music-card img {
+    border-radius: 8px;
+}
+
+.music-card audio {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.music-info {
+    display: flex;
+}
+
+.music-text {
+    margin-left: 8px;
+}
+
+.music-title {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5px;
+}
+
+.music-desc {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.close-button {
+    border: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button svg {
+        height: 18px;
+    width: 18px;
+}
+
+.open {
+    display: flex;
 }
 
 @media (max-width:768px) {
