@@ -45,7 +45,7 @@ body {
     background-color: var(--bg-color);
     color: white;
     font-family: "Inter", sans-serif;
-    overflow-x: clip;
+    overflow-x: hidden;
 }
 
 .navbar {
