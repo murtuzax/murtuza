@@ -205,6 +205,7 @@ body {
     gap: 5px;
     color: var(--text-muted);
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .about-info-card {
